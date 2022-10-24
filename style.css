@@ -1,54 +1,56 @@
-/* css Zen Garden default style v1.02 */
-/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
-
-/* This file based on 'Tranquille' by Dave Shea */
-/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
-/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
-
-/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
-
-
 /* basic elements */
 html {
 	margin: 0;
 	padding: 0;
-	}
+}
+
 body {
-	font: georgia, sans-serif;
-	line-height: 1.4;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
 	color: #000000;
 	margin: 0;
 	padding: 0;
 	display: flex;
 	justify-content: center;
-	}
+}
+
+h3, p {
+	margin-top: 0.8rem;
+}
+
 p {
-	margin-top: 0;
 	text-align: justify;
-	}
+	color: rgb(32, 32, 32);
+}
+
 h3 {
-	font: 1.4em georgia, sans-serif;
-	letter-spacing: 1.2px;
+	font: 1.4rem sans-serif;
+	letter-spacing: 0.08rem;
 	margin-bottom: 14px;
 	color: #000000;
-	}
+}
+
 a:link {
 	font-weight: bold;
 	text-decoration: none;
-	color: #7d49efea;
-	}
+	color: #228722ce;
+}
+
 a:visited {
 	font-weight: bold;
 	text-decoration: none;
-	color: #c02727e2;
-	}
+	color: #7443ddea;
+}
+
 a:hover, a:focus, a:active {
 	text-decoration: underline;
 	color: #ba3333;
-	}
+}
+
 abbr {
 	border-bottom: none;
-	}
+}
 
 /* specific divs */
 #css-zen-garden::before {
@@ -67,27 +69,32 @@ abbr {
 	opacity: 0.25;
 	position: fixed;
 }
+
 .page-wrapper {
 	padding: 0 100px;
 	margin: 0;
 	margin-bottom: 50px;
 	position: relative;
-	}
+}
 
 .intro {
 	display: flex;
 	flex-direction: column;
-	}
+}
 
 header h1 {
-	font-size: 5em;
-	font-style: italic;
-	letter-spacing: 0.1em;
-	}
+	font-size: 5rem;
+	font-weight: 500;
+	letter-spacing: 0.1rem;
+	margin-bottom: 0;
+}
+
 header h2 {
-	font-size: 3em;
+	margin-top: 1.3rem;
+	font-size: 3rem;
 	font-weight: 100;
-	}
+}
+
 header {
 	padding-top: 20px;
 	text-align: center;
@@ -102,79 +109,98 @@ header {
 }
 
 .summary p {
-	font: italic 1.1em/1.8 georgia;
+	color: #7d461b;
+	font: italic 1.1rem/1.8 georgia;
 	text-align: center;
 }
 
 .preamble {
 	clear: right;
 	padding: 0px 10px 0 10px;
-	}
+}
+
 .supporting {
 	padding-left: 10px;
 	margin-bottom: 40px;
 	}
 
 .supporting > div:nth-child(odd) {
-	width: 70%;
+	width: 75%;
 }
 
 .supporting > div:nth-child(even) {
 	text-align: right;
-	/* color: blue; */
 }
+
+
+/* CARDS */
+
+div.explation {
+
+}
+
+div.participation {
+
+}
+
+div.benefits {
+
+}
+
 
 footer {
-	text-align: center;
-	}
+	display: flex;
+	justify-content: flex-end;
+}
+
+footer a {
+	max-width: fit-content;
+	padding: 1rem;
+	border: dotted coral 2px;
+	box-shadow: 2px 2px 13px 0.4px black;
+	border-radius: 20px;
+	transition: all ease 0.2s;
+}
+
+footer a:hover {
+	text-decoration: none;
+	background-color: coral;
+}
+
+footer a:active {
+	background-color: cornflowerblue;
+}
+
 footer a:link, footer a:visited {
-	margin-right: 20px;
-	}
+	margin-left: 20px;
+}
 
-.sidebar {
-	top: 0;
-	right: 0;
-	}
+
 .sidebar .wrapper {
-	font: georgia, sans-serif;
-	background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y;
+	/* background: transparent url(http://csszengarden.com/001/paper-bg.jpg) bottom left repeat-y; */
 	padding: 10px;
-	}
+}
 
-.sidebar .wrapper div:nth-child(odd) {
+.sidebar div {
+	margin-bottom: 1.5rem;
+}
+
+.sidebar .wrapper div:nth-child(3) {
 	text-align: right;
 }
-/*
-.sidebar h3.select {
-	margin: 10px 0 5px 0;
-	}
-.sidebar h3.archives {
-	margin: 25px 0 5px 0;
-	}
-.sidebar h3.resources {
-	margin: 25px 0 5px 0;
-	} */
-
 
 .sidebar ul {
 	margin: 0;
 	padding: 0;
-	}
+}
+
 .sidebar li {
-	line-height: 1.3em;
+	line-height: 1.3rem;
 	display: block;
 	padding-top: 5px;
 	margin-bottom: 5px;
 	list-style-type: none;
-	}
-.sidebar li a:link {
-	color: #8b5bdd;
-	}
-.sidebar li a:visited {
-	color: #bf7419;
-	}
-
-
+}
 
 
 /* ====================== */
@@ -185,7 +211,6 @@ footer a:link, footer a:visited {
 @media only screen and (min-width: 820px) {
 	.page-wrapper {
 		width: 40%;
-
 	}
 }
 
