@@ -62,8 +62,8 @@ abbr {
 	bottom: 0;
 	width: 100%;
 	/* background: url('https://i.pinimg.com/originals/b1/bd/1d/b1bd1d1caa27384c3de7f2354fbc4a23.jpg'); */
-	/* background: url('http://cdn.home-designing.com/wp-content/uploads/2013/08/japanese-garden-forest-2.jpg'); */
-	background: url('https://www.gardendesign.com/pictures/images/900x705Max/site_3/zen-garden-japanese-garden-raked-gravel-garden-shutterstock-com_15666.jpg');
+	background: url('http://cdn.home-designing.com/wp-content/uploads/2013/08/japanese-garden-forest-2.jpg');
+	/* background: url('https://www.gardendesign.com/pictures/images/900x705Max/site_3/zen-garden-japanese-garden-raked-gravel-garden-shutterstock-com_15666.jpg'); */
 	background-position: 50% 0;
 	background-size: cover;
 	opacity: 0.25;
@@ -71,10 +71,10 @@ abbr {
 }
 
 .page-wrapper {
-	padding: 0 100px;
 	margin: 0;
 	margin-bottom: 50px;
 	position: relative;
+	width: 85vw;
 }
 
 .intro {
@@ -83,7 +83,7 @@ abbr {
 }
 
 header h1 {
-	font-size: 5rem;
+	font-size: 2.7rem;
 	font-weight: 500;
 	letter-spacing: 0.1rem;
 	margin-bottom: 0;
@@ -91,17 +91,13 @@ header h1 {
 
 header h2 {
 	margin-top: 1.3rem;
-	font-size: 3rem;
+	font-size: 2rem;
 	font-weight: 100;
 }
 
 header {
 	padding-top: 20px;
 	text-align: center;
-}
-
-.summary {
-	clear: both;
 }
 
 .summary p:first-child {
@@ -114,18 +110,12 @@ header {
 	text-align: center;
 }
 
-.preamble {
-	clear: right;
-	padding: 0px 10px 0 10px;
+.supporting {
+	margin-bottom: 1rem;
 }
 
-.supporting {
-	padding-left: 10px;
-	margin-bottom: 40px;
-	}
-
 .supporting > div:nth-child(odd) {
-	width: 75%;
+	/* width: 75%; */
 }
 
 .supporting > div:nth-child(even) {
@@ -135,31 +125,45 @@ header {
 
 /* CARDS */
 
-div.explation {
+div.preamble, div.explanation, div.participation, div.benefits, div.requirements {
+	border-radius: 8px;
+	padding: 1rem;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.317);
+	margin: 1rem 0;
+	background-color: none;
+}
 
+div.preamble {
+	background-color: lightcoral;
+}
+
+div.explanation {
+	background-color: lightgoldenrodyellow;
 }
 
 div.participation {
-
+	background-color: bisque;
 }
 
 div.benefits {
-
+	background-color: lightblue;
 }
 
+div.requirements {
+	background-color: lightgreen;
+}
 
 footer {
 	display: flex;
-	justify-content: flex-end;
+	flex-direction: column;
+	margin-top: 1rem;
 }
 
 footer a {
-	max-width: fit-content;
 	padding: 1rem;
-	border: dotted coral 2px;
-	box-shadow: 2px 2px 13px 0.4px black;
+	margin: 0.3rem 0;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.317);
 	border-radius: 20px;
-	transition: all ease 0.2s;
 }
 
 footer a:hover {
@@ -172,13 +176,7 @@ footer a:active {
 }
 
 footer a:link, footer a:visited {
-	margin-left: 20px;
-}
-
-
-.sidebar .wrapper {
-	/* background: transparent url(http://csszengarden.com/001/paper-bg.jpg) bottom left repeat-y; */
-	padding: 10px;
+	margin-left: 0;
 }
 
 .sidebar div {
@@ -202,15 +200,114 @@ footer a:link, footer a:visited {
 	list-style-type: none;
 }
 
+.design-selection ul > li {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.317);
+	border-radius: 8px;
+}
+
+.design-selection ul > li > a {
+	font-size: 1rem;
+	text-decoration: none;
+}
+
+.design-selection ul > li > a:last-child {
+	align-self: flex-end;
+	margin-top: 1em;
+	margin-bottom: 0;
+}
+
+.zen-resources, .design-archives {
+	display: flex;
+	flex-direction: column;
+	/* border: 1px solid; */
+	border-radius: 8px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.317);
+}
+
+.select, .zen-resources h3, .design-archives h3 {
+	margin: 0;
+	text-align: center;
+	padding: 1em;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	margin-bottom: 1em;
+	background-color: #000;
+	color: #fff;
+}
+
+.zen-resources ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 1em;
+}
+
+.zen-resources a, .design-archives a {
+	text-decoration: none;
+	padding: 0.25em 1em;
+	display: block;
+}
+
+.design-archives a {
+	background-color: beige;
+	border-radius: 0.5rem;
+	width: fit-content;
+	margin: 0.3rem;
+}
 
 /* ====================== */
 /* MEDIA QUERIES */
 /* ====================== */
 
 /* When large screen: */
-@media only screen and (min-width: 820px) {
+@media (min-width: 820px) {
+	#css-zen-garden::before {
+		background: url('https://www.gardendesign.com/pictures/images/900x705Max/site_3/zen-garden-japanese-garden-raked-gravel-garden-shutterstock-com_15666.jpg');
+		background-size: cover;
+		position: fixed;
+	}
+
 	.page-wrapper {
 		width: 40%;
 	}
+
+	header h1 {
+		font-size: 5rem;
+	}
+
+	header h2 {
+		font-size: 3rem;
+	}
+
+	.supporting > div:nth-child(odd) {
+		width: 75%;
+	}
+
+	footer {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		margin-top: 1rem;
+	}
+
+	footer a {
+		max-width: fit-content;
+		padding: 1rem;
+		border-radius: 20px;
+		transition: all ease 0.2s;
+	}
+
+	footer a:link, footer a:visited {
+		margin-left: 20px;
+	}
+
+	div.preamble, div.explanation, div.participation, div.benefits, div.requirements {
+		background-color: rgba(0, 0, 0, 0);
+	}
+
 }
 
