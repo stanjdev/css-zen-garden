@@ -64,6 +64,7 @@ abbr {
 	/* background: url('https://i.pinimg.com/originals/b1/bd/1d/b1bd1d1caa27384c3de7f2354fbc4a23.jpg'); */
 	background: url('http://cdn.home-designing.com/wp-content/uploads/2013/08/japanese-garden-forest-2.jpg');
 	/* background: url('https://www.gardendesign.com/pictures/images/900x705Max/site_3/zen-garden-japanese-garden-raked-gravel-garden-shutterstock-com_15666.jpg'); */
+	/* background-attachment: fixed; */
 	background-position: 50% 0;
 	background-size: cover;
 	opacity: 0.25;
@@ -75,6 +76,9 @@ abbr {
 	margin-bottom: 50px;
 	position: relative;
 	width: 85vw;
+	padding: 0 3em;
+	border-radius: 0.5em;
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.317);
 }
 
 .intro {
@@ -112,10 +116,6 @@ header {
 
 .supporting {
 	margin-bottom: 1rem;
-}
-
-.supporting > div:nth-child(odd) {
-	/* width: 75%; */
 }
 
 .supporting > div:nth-child(even) {
@@ -235,7 +235,8 @@ footer a:link, footer a:visited {
 	border-top-left-radius: 7px;
 	border-top-right-radius: 7px;
 	margin-bottom: 1em;
-	background-color: #000;
+	background-image: url(images/patterns-2-2/aztec.png), radial-gradient(rgba(255, 255, 255, 0.14), rgba(173, 216, 230, 0.393));
+	background-color: rgb(25, 67, 152);
 	color: #fff;
 }
 
@@ -273,6 +274,7 @@ footer a:link, footer a:visited {
 
 	.page-wrapper {
 		width: 40%;
+		background: linear-gradient(100deg, seagreen -15%, rgba(245, 245, 245, 0.76) 25%, rgb(77, 128, 0) 190%);
 	}
 
 	header h1 {
@@ -307,6 +309,53 @@ footer a:link, footer a:visited {
 
 	div.preamble, div.explanation, div.participation, div.benefits, div.requirements {
 		background-color: rgba(0, 0, 0, 0);
+	}
+
+	div.explanation {
+		background: radial-gradient(ellipse at bottom, whitesmoke, rgba(19, 156, 171, 0.678))
+	}
+
+	footer {
+		background-image: url(images/decoration-3.png);
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-size: 300px;
+		padding-top: 85px;
+	}
+
+	.participation p:nth-child(4) a:nth-child(1),
+	.participation p:nth-child(4) a:nth-child(2),
+	.summary a {
+		padding: 1em;
+		line-height: 3.4em;
+		border-radius: 0.5em;
+		text-decoration: none;
+		transition: all ease 0.2s;
+		background-size: 200px, 30px;
+		background-repeat: no-repeat, no-repeat;
+		background-position: center left, center right 12px;
+		padding-right: 3.5em;
+	}
+
+	.participation p:nth-child(4) a:nth-child(1),
+	.summary a:nth-child(1) {
+		background-image:
+			radial-gradient(rgba(245, 245, 245, 0.126) 25%, rgb(138, 30, 116)190%),
+			url(images/icons/file-download.png);
+	}
+
+	.participation p:nth-child(4) a:nth-child(2),
+	.summary a:nth-child(2) {
+		background-image:
+			radial-gradient(rgba(245, 245, 245, 0.126) 25%, rgb(138, 30, 116)190%),
+			url(images/icons/css-file.png);
+	}
+
+	.participation p:nth-child(4) a:nth-child(1):hover,
+	.participation p:nth-child(4) a:nth-child(2):hover,
+	.summary a:nth-child(1):hover,
+	.summary a:nth-child(2):hover {
+		background-color: rgb(62, 195, 207);
 	}
 
 }
