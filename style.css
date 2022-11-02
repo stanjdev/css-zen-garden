@@ -6,6 +6,7 @@ html {
 
 body {
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	background: -apple-system;
 	font-size: 16px;
 	line-height: 1.5;
 	color: #000000;
@@ -34,18 +35,18 @@ h3 {
 a:link {
 	font-weight: bold;
 	text-decoration: none;
-	color: #228722ce;
+	color: #197f19c5;
 }
 
 a:visited {
 	font-weight: bold;
 	text-decoration: none;
-	color: #7443ddea;
+	color: #572ab8ea;
 }
 
 a:hover, a:focus, a:active {
 	text-decoration: underline;
-	color: #ba3333;
+	color: #ad2727;
 }
 
 abbr {
@@ -78,7 +79,7 @@ abbr {
 	width: 85vw;
 	padding: 0 3em;
 	border-radius: 0.5em;
-	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.317);
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.317);
 }
 
 .intro {
@@ -109,7 +110,6 @@ header {
 }
 
 .summary p {
-	color: #7d461b;
 	font: italic 1.1rem/1.8 georgia;
 	text-align: center;
 }
@@ -123,34 +123,35 @@ header {
 }
 
 
+
 /* CARDS */
 
 div.preamble, div.explanation, div.participation, div.benefits, div.requirements {
 	border-radius: 8px;
 	padding: 1rem;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.317);
-	margin: 1rem 0;
+	margin-bottom: 1rem;
 	background-color: none;
 }
 
 div.preamble {
-	background-color: lightcoral;
+	background: radial-gradient(ellipse at bottom, whitesmoke, rgba(171, 44, 19, 0.59))
 }
 
 div.explanation {
-	background-color: lightgoldenrodyellow;
+	background: radial-gradient(ellipse at bottom, whitesmoke, rgba(51, 168, 181, 0.527))
 }
 
 div.participation {
-	background-color: bisque;
+	background: radial-gradient(ellipse at bottom, whitesmoke, rgba(41, 160, 114, 0.7))
 }
 
 div.benefits {
-	background-color: lightblue;
+	background: radial-gradient(ellipse at top, whitesmoke, rgba(144, 96, 199, 0.597))
 }
 
 div.requirements {
-	background-color: lightgreen;
+	background: radial-gradient(ellipse at top, whitesmoke, rgba(171, 105, 19, 0.678))
 }
 
 footer {
@@ -168,7 +169,7 @@ footer a {
 
 footer a:hover {
 	text-decoration: none;
-	background-color: coral;
+	background-color: rgb(223, 127, 92);
 }
 
 footer a:active {
@@ -177,6 +178,14 @@ footer a:active {
 
 footer a:link, footer a:visited {
 	margin-left: 0;
+}
+
+footer {
+	background-image: url(images/decoration-3.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 300px;
+	padding-top: 85px;
 }
 
 .sidebar div {
@@ -210,20 +219,22 @@ footer a:link, footer a:visited {
 }
 
 .design-selection ul > li > a {
-	font-size: 1rem;
 	text-decoration: none;
+}
+
+.design-selection ul > li > a:first-child {
+	align-self: flex-start;
 }
 
 .design-selection ul > li > a:last-child {
 	align-self: flex-end;
-	margin-top: 1em;
+	margin-top: 0.5em;
 	margin-bottom: 0;
 }
 
 .zen-resources, .design-archives {
 	display: flex;
 	flex-direction: column;
-	/* border: 1px solid; */
 	border-radius: 8px;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.317);
 }
@@ -254,27 +265,40 @@ footer a:link, footer a:visited {
 }
 
 .design-archives a {
-	background-color: beige;
-	border-radius: 0.5rem;
 	width: fit-content;
 	margin: 0.3rem;
 }
+
+
+
+
+
 
 /* ====================== */
 /* MEDIA QUERIES */
 /* ====================== */
 
-/* When large screen: */
-@media (min-width: 820px) {
+
+/* TINY MOBILE SCREEN */
+@media (max-width: 414px) {
+	.page-wrapper {
+		width: 100vw;
+		padding: 0 1rem;
+	}
+}
+
+
+/* MID/LARGE SCREEN: */
+@media (min-width: 915px) {
 	#css-zen-garden::before {
-		background: url('https://www.gardendesign.com/pictures/images/900x705Max/site_3/zen-garden-japanese-garden-raked-gravel-garden-shutterstock-com_15666.jpg');
+		background: url('https://i.pinimg.com/originals/b1/bd/1d/b1bd1d1caa27384c3de7f2354fbc4a23.jpg');
 		background-size: cover;
 		position: fixed;
 	}
 
 	.page-wrapper {
 		width: 40%;
-		background: linear-gradient(100deg, seagreen -15%, rgba(245, 245, 245, 0.76) 25%, rgb(77, 128, 0) 190%);
+		background: linear-gradient(100deg, rgb(50, 152, 79) -15%, rgba(245, 245, 245, 0.76) 25%, rgb(77, 128, 0) 190%);
 	}
 
 	header h1 {
@@ -292,7 +316,7 @@ footer a:link, footer a:visited {
 	footer {
 		display: flex;
 		flex-direction: row;
-		justify-content: flex-end;
+		justify-content: space-evenly;
 		margin-top: 1rem;
 	}
 
@@ -307,27 +331,10 @@ footer a:link, footer a:visited {
 		margin-left: 20px;
 	}
 
-	div.preamble, div.explanation, div.participation, div.benefits, div.requirements {
-		background-color: rgba(0, 0, 0, 0);
-	}
-
-	div.explanation {
-		background: radial-gradient(ellipse at bottom, whitesmoke, rgba(19, 156, 171, 0.678))
-	}
-
-	footer {
-		background-image: url(images/decoration-3.png);
-		background-repeat: no-repeat;
-		background-position: center top;
-		background-size: 300px;
-		padding-top: 85px;
-	}
-
 	.participation p:nth-child(4) a:nth-child(1),
 	.participation p:nth-child(4) a:nth-child(2),
 	.summary a {
-		padding: 1em;
-		line-height: 3.4em;
+		padding: 0.8rem 1em;
 		border-radius: 0.5em;
 		text-decoration: none;
 		transition: all ease 0.2s;
@@ -335,19 +342,20 @@ footer a:link, footer a:visited {
 		background-repeat: no-repeat, no-repeat;
 		background-position: center left, center right 12px;
 		padding-right: 3.5em;
+		display: inline-block;
 	}
 
 	.participation p:nth-child(4) a:nth-child(1),
 	.summary a:nth-child(1) {
 		background-image:
-			radial-gradient(rgba(245, 245, 245, 0.126) 25%, rgb(138, 30, 116)190%),
+			radial-gradient(rgba(245, 245, 245, 0.126) 25%, rgb(25, 67, 152)190%),
 			url(images/icons/file-download.png);
 	}
 
 	.participation p:nth-child(4) a:nth-child(2),
 	.summary a:nth-child(2) {
 		background-image:
-			radial-gradient(rgba(245, 245, 245, 0.126) 25%, rgb(138, 30, 116)190%),
+			radial-gradient(rgba(245, 245, 245, 0.126) 25%, rgb(25, 67, 152)190%),
 			url(images/icons/css-file.png);
 	}
 
@@ -357,6 +365,72 @@ footer a:link, footer a:visited {
 	.summary a:nth-child(2):hover {
 		background-color: rgb(62, 195, 207);
 	}
-
 }
 
+
+
+
+
+
+
+
+/* LARGER SCREEN */
+@media screen and (min-width: 1204px) {
+	#css-zen-garden::before {
+		background: url('https://www.gardendesign.com/pictures/images/900x705Max/site_3/zen-garden-japanese-garden-raked-gravel-garden-shutterstock-com_15666.jpg');
+		background-size: cover;
+		position: fixed;
+	}
+
+	.page-wrapper {
+		width: 75%;
+		display: grid;
+		grid-gap: 1em;
+		grid-template-columns: 2fr 1fr;
+	}
+
+	p {
+		text-align: initial;
+	}
+
+	.intro {
+		grid-column: 1 / -1;
+	}
+
+	.summary p:first-child {
+		text-align: center;
+	}
+
+	.preamble {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 1em;
+	}
+
+	.preamble h3 {
+		grid-column: 1 / -1;
+	}
+
+	.supporting > div:nth-child(odd) {
+		width: initial;
+	}
+
+	.explanation {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 1em;
+	}
+
+	.explanation > h3 {
+		grid-column: 1 / -1;
+	}
+
+	footer {
+		justify-content: space-evenly;
+	}
+
+	footer a {
+		min-width: 10%;
+		text-align: center;
+	}
+}
